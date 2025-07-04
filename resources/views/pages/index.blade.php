@@ -14,15 +14,22 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-7">
-                        <div class="hero-text">
-                            <h2>🧡 Your Table, Your Rewards / 用餐越多，回馈越多</h2>
-                            <p style="line-height: 2;">
-                                ✨ Earn points every time you dine with us at Wondering Plan A Sdn Bhd!<br>
-                                ✨ 每次用餐都能赚取积分，尽在 Wondering Plan A Sdn Bhd!
-                            </p>
-                            <a href="#works" class="hero-btn">How it Work</a>
-                            <a href="#download" class="hero-btn btn-active">Get Now</a>
-                        </div>
+                    <div class="hero-text">
+                    <h2 style="line-height: 1.5;">
+                        <!-- <span style="display: block;">🧡</span> -->
+                        <span style="display: block;">Your Table, Your Rewards</span>
+                    </h2>
+
+                    <p style="display: flex; align-items: start; gap: 0.5rem; line-height: 2;">
+                        <span style="flex-shrink: 0;">✨</span>
+                        <span>Earn points every time you dine with us at Wondering Plan A Sdn Bhd!</span>
+                    </p>
+
+                    <div class="hero-btn-area">
+                        <a href="#works" class="hero-btn">How it Work</a>
+                        <a href="#download" class="hero-btn btn-active">Get Now</a>
+                    </div>
+                </div>
                     </div>
                 </div>
             </div>
@@ -42,19 +49,23 @@
     <div id="features" class="section-padding">
         <div class="container">
             <div class="row">
-                <h2>Member Perks / 会员福利</h2>
-                <div class="col-md-6">
-                    <div class="single-service">
-                        <img src="assets/img/icon/exclusive_promo.png" alt="">
-                        <h2>Exclusive promos / 独家优惠</h2>
-                        <p>Lorem ipsum dolor sit amt, consectet adop adipisicing elit, sed do eiusmod tepo raraincididunt ugt labore.</p>
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2>Member Perks</h2>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="single-service">
-                        <img src="assets/img/icon/fast_rewards.png" alt="">
-                        <h2>Fast rewards / 快速兑换</h2>
-                        <p>Lorem ipsum dolor sit amt, consectet adop adipisicing elit, sed do eiusmod tepo raraincididunt ugt labore.</p>
+                    <div class="col-md-6">
+                        <div class="single-service">
+                            <img src="assets/img/icon/exclusive_promo.png" alt="">
+                            <h2>Exclusive promos</h2>
+                            <p style="text-align: start;">Lorem ipsum dolor sit amt, consectet adop adipisicing elit, sed do eiusmod tepo raraincididunt ugt labore.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="single-service">
+                            <img src="assets/img/icon/fast_rewards.png" alt="">
+                            <h2>Fast rewards</h2>
+                            <p style="text-align: start;">Lorem ipsum dolor sit amt, consectet adop adipisicing elit, sed do eiusmod tepo raraincididunt ugt labore.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -100,32 +111,42 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-work text-center">
-                        <img src="assets/img/icon/register.png" alt="">
-                        <h2>Register for free / 免费注册</h2>
-                        <p>Lorem ipsum dolor sit ameteped consecteadop adipisicing elitab sed eiusmod temporara incident</p>
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div class="row" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 20px;">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-work text-center" style="display: flex; flex-direction: column; height: 100%;">
+                            <img src="assets/img/icon/register.png" alt="" style="height: 62px; width: auto; margin: 0 auto;">
+                            <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-start;">
+                                <h2>Register for free</h2>
+                                <p style="text-align: start; align-items: center;">Lorem ipsum dolor sit ameteped consecteadop adipisicing elitab sed eiusmod temporara incident</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-work text-center" style="display: flex; flex-direction: column; height: 100%;">
+                            <img src="assets/img/icon/earn_points.png" alt="" style="height: 62px; width: auto; margin: 0 auto;">
+                            <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-start;">
+                                <h2>Earn points</h2>
+                                <p style="text-align: start; align-items: center;">Lorem ipsum dolor sit ameteped consecteadop adipisicing elitab sed eiusmod temporara incident</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-work text-center" style="display: flex; flex-direction: column; height: 100%;">
+                            <img src="assets/img/icon/redeem_points.png" alt="" style="height: 62px; width: auto; margin: 0 auto;">
+                            <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-start;">
+                                <h2>Redeem points</h2>
+                                <p style="text-align: start; align-items: center;">Lorem ipsum dolor sit ameteped consecteadop adipisicing elitab sed eiusmod temporara incident</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-work text-center">
-                        <img src="assets/img/icon/earn_points.png" alt="">
-                        <h2>Earn points / 累积积分</h2>
-                        <p>Lorem ipsum dolor sit ameteped consecteadop adipisicing elitab sed eiusmod temporara incident</p>
+                <div class="row" style="margin-top: 20px;">
+                    <div class="col-md-8 col-md-offset-2">
+                        <img src="assets/img/bg/work-bg.png" alt="">
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-work text-center">
-                        <img src="assets/img/icon/redeem_points.png" alt="">
-                        <h2>Redeem points / 兑换回馈</h2>
-                        <p>Lorem ipsum dolor sit ameteped consecteadop adipisicing elitab sed eiusmod temporara incident</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <img src="assets/img/bg/work-bg.png" alt="">
                 </div>
             </div>
         </div>
@@ -144,7 +165,7 @@
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="feature-area text-right">
+                    <div class="feature-area">
                         <div class="feature">
                             <div class="feature-icon">
                                 <img src="assets/img/icon/feature-icon-1.png" alt="">
@@ -208,10 +229,9 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
                     <div class="app-download-title text-center">
-                        <h2>Call to Action / 行动呼吁</h2>
+                        <h2>Call to Action</h2>
                         <p style="line-height: 2;">
                             Download Wondering Plan A Sdn Bhd Membership App today!<br>
-                            立即下载 Wondering Plan A Sdn Bhd会员 App!<br>
                             📱 Google Play & App Store
                         </p>
 
@@ -220,7 +240,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12 text-center ">
-                    <div class="app-btn">
+                    <div class="download-btn-area">
                         <a href="#" class="download-btn">Google Store<i class="fa fa-android"></i></a>
                         <a href="#" class="download-btn">Apple Store <i class="fa fa-apple"></i></a>
                         <a href="#" class="download-btn">Windows Store<i class="fa fa-windows"></i></a>

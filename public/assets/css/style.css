@@ -380,7 +380,8 @@ Hero Area
     border-radius: 50px;
     transition: .3s;
     font-weight: 500;
-    margin-right: 15px;
+    width: 180px;
+    text-align: center;
 }
 
 .btn-active {
@@ -394,6 +395,24 @@ Hero Area
     color: #fff;
 }
 
+.hero-btn-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px; /* consistent spacing between buttons */
+}
+
+@media (max-width: 767px) {
+    .hero-btn-area {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 991px) {
+    .hero-btn {
+        width: 100%;
+    }
+}
 
 /**************
  **service area
@@ -524,6 +543,16 @@ work section
 /******************
 feature area 
 ******************/
+
+@media (max-width: 991px) {
+    .feature-icon {
+        text-align: center;
+    }
+}
+
+.feature-icon img {
+    display: inline-block;
+}
 
 .feature {
     margin-bottom: 37px;
@@ -1068,6 +1097,20 @@ Download area
     color: #fff;
 }
 
+.download-btn-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* consistent spacing between buttons */
+}
+
+@media (max-width: 767px) {
+    .download-btn-area {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .download-btn {
     display: inline-block;
     color: #fff;
@@ -1078,7 +1121,14 @@ Download area
     -webkit-transition: .3s;
     transition: .3s;
     box-shadow: 0 3px 22px 0 rgba(0, 0, 0, 0.2);
-    margin: 0px 10px;
+    width: 220px;
+    text-align: center;
+}
+
+@media (max-width: 991px) {
+    .download-btn {
+        width: 100%;
+    }
 }
 
 .download-btn i {

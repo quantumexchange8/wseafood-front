@@ -190,14 +190,14 @@
         width: 67%;
     }
     .hero-btn {
-        margin-bottom: 15px;
+        /* margin-bottom: 15px; */
     }
     .about-app {
         text-align: center;
         margin-top: 10px;
     }
     .feature:last-child {
-        margin-bottom: 0px;
+        margin-bottom: 30px;
     }
     .feature-area.text-right .feature:last-child {
         margin-bottom: 30px;
@@ -231,7 +231,7 @@
         margin-bottom: 50px;
     }
     .download-btn {
-        margin-bottom: 15px;
+        /* margin-bottom: 15px; */
     }
     .news-letter {
         padding: 40px 0px;
