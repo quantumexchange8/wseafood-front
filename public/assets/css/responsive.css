@@ -197,7 +197,7 @@
         margin-top: 10px;
     }
     .feature:last-child {
-        margin-bottom: 30px;
+        margin-bottom: 0px;
     }
     .feature-area.text-right .feature:last-child {
         margin-bottom: 30px;

@@ -568,6 +568,10 @@ feature area
     .feature-icon {
         text-align: center;
     }
+
+    .feature-apps {
+        padding: 30px 0px;
+    }
 }
 
 .feature-icon img {
@@ -575,7 +579,7 @@ feature area
 }
 
 .feature {
-    margin-bottom: 37px;
+    /* margin-bottom: 37px; */
 }
 
 .feature h3 {

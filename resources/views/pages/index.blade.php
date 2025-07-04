@@ -195,7 +195,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="feature-apps">
-                        <img src="assets/img/app/feature-app.png" alt="">
+                        <img src="assets/img/app/feature-app.png" alt="" style="max-height: 400px;">
                     </div>
                 </div>
                 <div class="col-md-4">
