@@ -3,6 +3,8 @@
 return [
     "slider_section_header" => "吃得越多，赚得越多！",
     "slider_section_caption" => "立即加入我们的会员积分计划，每一次点餐都能换来惊喜好礼、免费美食，还有专属会员福利等你领取！",
+    'how_it_works' => '如何运作',
+    'get_now' => '立即获取',
 
     "member_perks" => "会员专属福利",
     "exclusive_promos" => "独家优惠",

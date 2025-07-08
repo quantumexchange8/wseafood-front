@@ -3,6 +3,8 @@
 return [
     "slider_section_header" => "The More You Dine, The More You Earn!",
     "slider_section_caption" => "Join our loyalty program today and turn every order into rewards — free meals, exclusive gifts, and special member perks await!",
+    'how_it_works' => 'How It Works',
+    'get_now' => 'Get Now',
 
     "member_perks" => "Member Perks",
     "exclusive_promos" => "Exclusive Promos",

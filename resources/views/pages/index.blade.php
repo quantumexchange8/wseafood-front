@@ -64,8 +64,8 @@
                             </p>
 
                             <div class="hero-btn-area">
-                                <a href="#works" class="hero-btn" style="min-width: 180px; text-align: center;">How it Work</a>
-                                <a href="#download" class="hero-btn btn-active" style="min-width: 180px; text-align: center;">Get Now</a>
+                                <a href="#works" class="hero-btn" style="min-width: 180px; text-align: center;">{{ __('public.how_it_works') }}</a>
+                                <a href="#download" class="hero-btn btn-active" style="min-width: 180px; text-align: center;">{{ __('public.get_now') }}</a>
                             </div>
                         </div>
                     </div>
