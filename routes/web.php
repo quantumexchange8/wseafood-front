@@ -1,7 +1,14 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
+
+Route::get('lang/{locale}', function ($locale) {
+    session(['locale' => $locale]);
+    App::setLocale($locale);
+    return redirect()->back();
+});
 
 Route::get('/', function () {
     return view('pages.index');

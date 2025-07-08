@@ -1,12 +1,51 @@
 <x-app-layout>
     <!--   hero area start -->
     <div class="hero-area">
+        @php
+            $languages = ['en' => 'EN', 'cn' => '中文'];
+            $current = App::getLocale();
+        @endphp
+
+        <script>
+            function toggleLangMenu() {
+                const menu = document.getElementById("lang-menu");
+                menu.style.display = menu.style.display === "block" ? "none" : "block";
+            }
+
+            document.addEventListener('click', function (event) {
+                const menu = document.getElementById("lang-menu");
+                const switcher = document.querySelector(".language-switcher");
+
+                if (!switcher.contains(event.target)) {
+                    menu.style.display = "none";
+                }
+            });
+        </script>
+
         <div class="row">
-            <div class="col-md-3">
-                <div class="logo">
-                    <!-- <a href="{{ url('/') }}"> -->
+            <div class="col-md-12">
+                <div style="display: flex; justify-content: space-between; align-items: stretch;">
+                    <div class="logo">
                         <img src="{{ asset('assets/img/logo/logo.png') }}" alt="Logo">
-                    <!-- </a> -->
+                    </div>
+
+                    <div class="logo" style="display: flex; justify-content: end; align-items: center;">
+                        <div class="language-switcher">
+                            <button onclick="toggleLangMenu()" class="lang-btn lang-btn-active">
+                                {{ $languages[$current] }}
+                            </button>
+
+                            <div id="lang-menu" class="lang-menu">
+                                @foreach ($languages as $code => $name)
+                                    @if ($code !== $current)
+                                        <a href="{{ url('/lang/'.$code) }}" class="lang-btn">
+                                            {{ $name }}
+                                        </a>
+                                    @endif
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -16,17 +55,17 @@
                     <div class="col-md-7">
                         <div class="hero-text">
                             <h2 style="line-height: 1.5;">
-                                <span style="display: block;">Your Table, Your Rewards</span>
+                                <span style="display: block;">{{ __('public.slider_section_header') }}</span>
                             </h2>
 
                             <p style="display: flex; align-items: start; gap: 0.5rem; line-height: 2;">
                                 <span style="flex-shrink: 0;">✨</span>
-                                <span>Earn points every time you dine with us at Wondering Plan A Sdn Bhd!</span>
+                                <span>{{ __('public.slider_section_caption') }}</span>
                             </p>
 
                             <div class="hero-btn-area">
-                                <a href="#works" class="hero-btn">How it Work</a>
-                                <a href="#download" class="hero-btn btn-active">Get Now</a>
+                                <a href="#works" class="hero-btn" style="min-width: 180px; text-align: center;">How it Work</a>
+                                <a href="#download" class="hero-btn btn-active" style="min-width: 180px; text-align: center;">Get Now</a>
                             </div>
                         </div>
                     </div>
@@ -48,7 +87,7 @@
     <div id="features" class="section-padding">
         <div class="container">
             <div class="section-title">
-                <h2>Member Perks</h2>
+                <h2>{{ __('public.member_perks') }}</h2>
             </div>
             <div class="single-service-area">
                 <div class="row single-service-row">
@@ -56,8 +95,8 @@
                         <div class="single-service">
                             <img src="assets/img/icon/exclusive_promo.png" alt="">
                             <div>
-                                <h2>Exclusive promos</h2>
-                                <p>Lorem ipsum dolor sit amt, consectet adop adipisicing elit, sed do eiusmod tepo raraincididunt ugt labore.</p>
+                                <h2>{{ __('public.exclusive_promos') }}</h2>
+                                <p>{{ __('public.exclusive_promos_content') }}</p>
                             </div>
                         </div>
                     </div>
@@ -66,8 +105,8 @@
                         <div class="single-service">
                             <img src="assets/img/icon/fast_rewards.png" alt="">
                             <div>
-                                <h2>Fast rewards</h2>
-                                <p>Lorem ipsum dolor sit amt, consectet adop adipisicing elit, sed do eiusmod tepo raraincididunt ugt labore.</p>
+                                <h2>{{ __('public.fast_rewards') }}</h2>
+                                <p>{{ __('public.fast_rewards_content') }}</p>
                             </div>
                         </div>
                     </div>
@@ -82,11 +121,21 @@
             <div class="row">
                 <div class="col-md-7">
                     <div class="section-title">
-                        <h2>ABOUT OUR APP</h2>
-                        <h3>One application multiplies properties </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti earum voluptatum reprehenderit nostrum dolor, necessitatibus quod dolorum odio ipsa accusantium harum molestias eligendi expedita illo mollitia, dolore distinctio porro tempore! Lorem ipsum dolor </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis iure recusandae minus cumque ratione quaerat, amet modi! Odio, inventore, nulla!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis iure recusandae minus </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis iure recusandae minus cumque ratione quaerat, amet modi! Odio</p>
+                        <h2>{{ __('public.about_app_main_heading') }}</h2>
+                        <h3>{{ __('public.about_app_sub_heading') }}</h3>
+                        <p style="font-size: medium;">{{ __('public.about_app_paragraph_1') }}</p>
+                        <p style="font-size: medium;">{{ __('public.about_app_paragraph_2') }}</p>
+
+                        <p>
+                            <ul style="list-style-type: none;">
+                                <li style="font-size: medium;">{{ __('public.about_app_bullet_1') }}</li>
+                                <li style="font-size: medium;">{{ __('public.about_app_bullet_2') }}</li>
+                                <li style="font-size: medium;">{{ __('public.about_app_bullet_3') }}</li>
+                                <li style="font-size: medium;">{{ __('public.about_app_bullet_4') }}</li>
+                            </ul>
+                        </p>
+
+                        <p style="font-size: medium;">{{ __('public.about_app_paragraph_3') }}</p>
                         <div class="about-social">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
@@ -110,8 +159,8 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
                     <div class="section-title text-center">
-                        <h2>How it work?</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam unde, accusantium consectetur sit excepturi eius.</p>
+                        <h2>{{ __('public.how_it_works_main_heading') }}</h2>
+                        <p style="font-size: medium;">{{ __('public.how_it_works_sub_heading') }}</p>
                     </div>
                 </div>
             </div>
@@ -121,8 +170,8 @@
                         <div class="single-work text-center" style="display: flex; flex-direction: column; height: 100%;">
                             <img src="assets/img/icon/register.png" alt="" style="height: 62px; width: auto; margin: 0 auto;">
                             <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-start;">
-                                <h2>Register for free</h2>
-                                <p>Lorem ipsum dolor sit ameteped consecteadop adipisicing elitab sed eiusmod temporara incident</p>
+                                <h2>{{ __('public.how_it_works_step_1_title') }}</h2>
+                                <p>{{ __('public.how_it_works_step_1_content') }}</p>
                             </div>
                         </div>
                     </div>
@@ -131,8 +180,8 @@
                         <div class="single-work text-center" style="display: flex; flex-direction: column; height: 100%;">
                             <img src="assets/img/icon/earn_points.png" alt="" style="height: 62px; width: auto; margin: 0 auto;">
                             <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-start;">
-                                <h2>Earn points</h2>
-                                <p>Lorem ipsum dolor sit ameteped consecteadop adipisicing elitab sed eiusmod temporara incident</p>
+                                <h2>{{ __('public.how_it_works_step_2_title') }}</h2>
+                                <p>{{ __('public.how_it_works_step_2_content') }}</p>
                             </div>
                         </div>
                     </div>
@@ -141,8 +190,8 @@
                         <div class="single-work text-center" style="display: flex; flex-direction: column; height: 100%;">
                             <img src="assets/img/icon/redeem_points.png" alt="" style="height: 62px; width: auto; margin: 0 auto;">
                             <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-start;">
-                                <h2>Redeem points</h2>
-                                <p>Lorem ipsum dolor sit ameteped consecteadop adipisicing elitab sed eiusmod temporara incident</p>
+                                <h2>{{ __('public.how_it_works_step_3_title') }}</h2>
+                                <p>{{ __('public.how_it_works_step_3_content') }}</p>
                             </div>
                         </div>
                     </div>
@@ -162,8 +211,8 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="section-title text-center">
-                        <h2>Special Features</h2>
-                        <p>Lorem ipsum madolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor coli incididunt ut labore Lorem ipsum madolor sit amet.</p>
+                        <h2>{{ __('public.why_loyalty_main_heading') }}</h2>
+                        <p style="font-size: medium;">{{ __('public.why_loyalty_sub_heading') }}</p>
                     </div>
                 </div>
             </div>
@@ -174,22 +223,22 @@
                             <div class="feature-icon">
                                 <img src="assets/img/icon/feature-icon-1.png" alt="">
                             </div>
-                            <h3>Creative Desig</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel volutpat felis, eu </p>
+                            <h3>{{ __('public.why_loyalty_feature_1_title') }}</h3>
+                            <p>{{ __('public.why_loyalty_feature_1_content') }}</p>
                         </div>
                         <div class="feature">
                             <div class="feature-icon">
                                 <img src="assets/img/icon/feature-icon-2.png" alt="">
                             </div>
-                            <h3>Retina ready</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel volutpat felis, eu </p>
+                            <h3>{{ __('public.why_loyalty_feature_2_title') }}</h3>
+                            <p>{{ __('public.why_loyalty_feature_2_content') }}</p>
                         </div>
                         <div class="feature">
                             <div class="feature-icon">
                                 <img src="assets/img/icon/feature-icon-3.png" alt="">
                             </div>
-                            <h3>High Resulation</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel volutpat felis, eu </p>
+                            <h3>{{ __('public.why_loyalty_feature_3_title') }}</h3>
+                            <p>{{ __('public.why_loyalty_feature_3_content') }}</p>
                         </div>
                     </div>
                 </div>
@@ -204,22 +253,22 @@
                             <div class="feature-icon">
                                 <img src="assets/img/icon/feature-icon-4.png" alt="">
                             </div>
-                            <h3>Clean Codes</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel volutpat felis, eu </p>
+                            <h3>{{ __('public.why_loyalty_feature_4_title') }}</h3>
+                            <p>{{ __('public.why_loyalty_feature_4_content') }}</p>
                         </div>
                         <div class="feature">
                             <div class="feature-icon">
                                 <img src="assets/img/icon/feature-icon-5.png" alt="">
                             </div>
-                            <h3>Unlimited Features</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel volutpat felis, eu </p>
+                            <h3>{{ __('public.why_loyalty_feature_5_title') }}</h3>
+                            <p>{{ __('public.why_loyalty_feature_5_content') }}</p>
                         </div>
                         <div class="feature">
                             <div class="feature-icon">
                                 <img src="assets/img/icon/feature-icon-6.png" alt="">
                             </div>
-                            <h3>Full free Chat</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel volutpat felis, eu </p>
+                            <h3>{{ __('public.why_loyalty_feature_6_title') }}</h3>
+                            <p>{{ __('public.why_loyalty_feature_6_content') }}</p>
                         </div>
                     </div>
                 </div>
@@ -233,9 +282,9 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
                     <div class="app-download-title text-center">
-                        <h2>Call to Action</h2>
+                        <h2>{{ __('public.download_section_header') }}</h2>
                         <p style="line-height: 2;">
-                            Download Wondering Plan A Sdn Bhd Membership App today!<br>
+                            {{ __('public.download_section_caption') }}<br>
                             📱 Google Play & App Store
                         </p>
 

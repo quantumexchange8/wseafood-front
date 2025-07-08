@@ -1,0 +1,50 @@
+<?php
+
+return [
+    "slider_section_header" => "The More You Dine, The More You Earn!",
+    "slider_section_caption" => "Join our loyalty program today and turn every order into rewards — free meals, exclusive gifts, and special member perks await!",
+
+    "member_perks" => "Member Perks",
+    "exclusive_promos" => "Exclusive Promos",
+    "exclusive_promos_content" => "Enjoy special promotions and deals available only for our loyal members. Be the first to know, the first to save.",
+
+    "fast_rewards" => "Fast Rewards",
+    "fast_rewards_content" => "Earn points with every order and redeem exciting rewards in no time — it's that fast and easy.",
+
+    "about_app_main_heading" => "About Our App",
+    "about_app_sub_heading" => "One App. Unlimited Rewards.",
+    "about_app_paragraph_1" => "Discover a smarter way to dine, earn, and enjoy.",
+    "about_app_paragraph_2" => "Our app lets you track points, redeem rewards, and access exclusive offers — all in one place. Whether you're at home or dining out, your loyalty is always rewarded.",
+    "about_app_bullet_1" => "✔ Instantly check your points balance",
+    "about_app_bullet_2" => "✔ Redeem gifts & vouchers anytime",
+    "about_app_bullet_3" => "✔ Receive birthday perks & seasonal bonuses",
+    "about_app_bullet_4" => "✔ Stay updated with the latest promotions",
+    "about_app_paragraph_3" => "Join thousands who are already enjoying the benefits. It's fast, free, and fun!",
+
+    "how_it_works_main_heading" => "How It Works",
+    "how_it_works_sub_heading" => "It's simple and rewarding — just follow three easy steps to start earning.",
+    "how_it_works_step_1_title" => "Register for Free",
+    "how_it_works_step_1_content" => "Create your account in seconds — no fees, no hidden conditions. Just sign up and you're in!",
+    "how_it_works_step_2_title" => "Earn Points",
+    "how_it_works_step_2_content" => "Every RM1 you spend = 1 point in your account. Dine more, earn faster.",
+    "how_it_works_step_3_title" => "Redeem Points",
+    "how_it_works_step_3_content" => "Use your points to redeem free meals, exclusive offers, or surprise gifts — all from your phone!",
+
+    "why_loyalty_main_heading" => "Why Our Loyalty System Stands Out",
+    "why_loyalty_sub_heading" => "Turn every meal into more than just satisfaction — unlock rewards, surprises, and status.",
+    "why_loyalty_feature_1_title" => "Spend to Earn More",
+    "why_loyalty_feature_1_content" => "The more you dine, the more you earn. Big meals? Big points!",
+    "why_loyalty_feature_2_title" => "Daily Bonus Points",
+    "why_loyalty_feature_2_content" => "Log in daily or scan your bill to get extra points on top of your spending.",
+    "why_loyalty_feature_3_title" => "Double Points Days",
+    "why_loyalty_feature_3_content" => "Enjoy exclusive double-points campaigns during holidays or special promos.",
+    "why_loyalty_feature_4_title" => "Tiered Rewards System",
+    "why_loyalty_feature_4_content" => "Reach higher tiers and get accelerated point accumulation and better rewards.",
+    "why_loyalty_feature_5_title" => "Redeem Anything, Anytime",
+    "why_loyalty_feature_5_content" => "Use your points for meals, drinks, or exclusive gifts — directly from your app.",
+    "why_loyalty_feature_6_title" => "Invite & Earn",
+    "why_loyalty_feature_6_content" => "Refer a friend and both of you get bonus points when they join.",
+
+    "download_section_header" => "Call to Action",
+    "download_section_caption" => "Download Wondering Plan A Sdn Bhd Membership App today!"
+];
