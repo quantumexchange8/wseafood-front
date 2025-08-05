@@ -65,7 +65,7 @@
 
                             <div class="hero-btn-area">
                                 <a href="#works" class="hero-btn" style="min-width: 180px; text-align: center;">{{ __('public.how_it_works') }}</a>
-                                <a href="#download" class="hero-btn btn-active" style="min-width: 180px; text-align: center;">{{ __('public.get_now') }}</a>
+                                <a href="{{ asset('wondering.apk') }}" class="hero-btn btn-active" style="min-width: 180px; text-align: center;">{{ __('public.get_now') }}</a>
                             </div>
                         </div>
                     </div>
@@ -294,7 +294,7 @@
             <div class="row">
                 <div class="col-md-12 text-center ">
                     <div class="download-btn-area">
-                        <a href="#" class="download-btn">Google Store<i class="fa fa-android"></i></a>
+                        <a href="{{ asset('wondering.apk') }}" class="download-btn">Google Store<i class="fa fa-android"></i></a>
                         <a href="#" class="download-btn">Apple Store <i class="fa fa-apple"></i></a>
                         <a href="#" class="download-btn">Windows Store<i class="fa fa-windows"></i></a>
                     </div>
