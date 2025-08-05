@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="footer-text">
-                    <p>&copy; 2024 wpOcean. All rights reserved.</p>
+                    <p>&copy; 2025 Wondering Seafood. All rights reserved.</p>
                 </div>
             </div>
             <div class="col-md-6">
